@@ -1,0 +1,210 @@
+Class - 1
+==========
+
+    -> Service Now is not Just Application 
+
+    -> Service Now is Platform 
+
+        -> ITSM (Incident Management, Problem Management, Change Management etc)
+
+        -> HRSD (Employee Center, Employee Life Cycle etc)
+
+        -> ITOM (Discovery, MID Servers, Service Mapping etc)
+
+    
+    -> ITOM 
+
+        -> IT Operations Management is suite of applications 
+        within service now this applications helps organizations 
+        discover, map, monitor and manage their companies 
+        IT Infrastructure and Services.   
+
+        
+        -> IT Infrastructure
+
+            -> Foundation Layer (Hardware + Software) 
+
+            -> Servers 
+
+                -> Physical Servers  
+
+                -> Virtual Servers 
+
+                -> Cloud Servers 
+
+            -> Networking 
+
+                -> Routers 
+
+                -> Switches 
+
+                -> Firewalls 
+
+                -> etc 
+
+            -> Operating Systems (System Software)
+
+
+        -> IT Services 
+
+            -> What Business Actually Use and Deliver their services 
+            to Customers 
+
+                -> Banking Services 
+
+                -> Ecommerce Services 
+
+                -> LMS Services 
+
+                -> etc 
+
+        -> NOTE: To Power IT Services, we need IT Infrastructure
+
+
+    -> Banking Service Like HDFC 
+
+        -> https://www.hdfc.bank.in/
+
+        -> Register Credit Card 
+
+            -> Mobile, Card Number, CVV, Expiry Date etc --> Data 
+
+                -> Data ?? 
+
+                    -> Data is inside Database 
+
+                        -> Database ?? 
+
+                            -> Database is inside Server 
+
+                        -> Server ?? 
+
+                            -> Server is inside Datacenter (Cloud / On-premise)
+
+    
+    -> NOTE: ITOM bridges the gap between IT Infrastructure and 
+    Business Services by providing Visibility over entire IT environment. 
+
+        -> https://pan.utiitsl.com/ 
+
+        -> https://www.pan.utiitsl.com/panonline_ipg/forms/csfPan.html/csfPreForm
+
+    -> Without ITOM 
+
+        -> Downtime = Revenue Loss 
+
+        -> No Visibility = Blind Operations 
+
+        -> Slow Incident Resolution 
+
+        -> NOTE: Real World Applications runs on thousands of servers 
+
+            -> One Failure, Cascading Impact 
+
+            -> Ex: Payment Gateway Fails -> Ecommerce Down -> Revenue Loss 
+
+        
+        -> NOTE: ITOM Goal                       
+
+            -> Visibility - Know What Exists 
+
+            -> Health - Is it Working ? 
+
+            -> Detect - What Went Wrong ? 
+
+
+        -> Who Should Learn ITOM ?? 
+
+            -> Service Now ITOM is best suited for professionals involved 
+            in IT Infrastructure, Cloud Operations, Monitoring etc (IT OPS)
+
+        -> ITOM Specialist Career Path 
+
+            -> Help Desk Engineer 
+                    |
+            -> System Administrator / Network Administrator 
+                    |
+            -> Cloud Engineer / DevOps Engineer 
+                    |
+            -> Service Now ITOM Specialist
+
+
+    -> Main Concepts Of ITOM
+
+        -> https://www.servicenow.com/docs/r/it-operations-management/discovery/r-discovery.html
+
+        -> Discovery 
+
+            -> https://vimeo.com/1092921849/0dcb800150?fl=pl&fe=cm
+    
+                -> SSH 
+
+                -> SNMP 
+
+                -> HTTP / HTTPS 
+
+                -> etc  
+
+        
+        -> Service Mapping 
+
+
+    -> ITOM Modules 
+
+        -> CMDB (Configuration Management Database)
+
+            -> CMDB is Backbone of ITOM, all discoverd assets 
+            and their relationships are stored here as 
+            Configuration Items (CI's) 
+
+        -> Configuration Items (CI's) 
+
+            -> Any Component that needs to be managed i.e 
+            Server, Database, Network Device, Server etc 
+
+        -> Discovery 
+
+            -> Process Of Automatically Identifying and Populating
+            CI's into the CMDB. 
+
+        -> MID Server 
+
+            -> To Perform Discovery we need MID Server 
+
+            -> Management - Instrumentation - Discovery 
+
+            -> A Java Based Application(Agent) installed on 
+            machine within your Datacenter (Cloud/On-Premise)
+
+            -> Acts as a Bridge between Service Now and Your Infrastructure
+
+        
+        -> Service Mapping 
+
+            -> Creates a Map Linking Business Service and all its
+            Dependent Infrastructure Components 
+
+            -> Ex: Payment Gateway Fails -> Ecommerce Down -> Revenue Loss 
+
+    
+    
+    -> CMDB 
+
+        -> A configuration management database (CMDB) functions 
+        as a comprehensive data warehouse, organizing information 
+        about an IT environment. 
+
+        -> https://www.servicenow.com/in/products/it-operations-management/what-is-cmdb.html
+
+        -> CMDB clarifies the relationships between hardware, 
+        software components, and networks for 
+        improved configuration management.
+
+        -> CMDB is ServiceNow's Master Inventory of everything 
+        in your IT environment
+
+            -> Every Server, Application, Database, Network, IP Address, 
+            Cloud Server, Business Service all of these lives as records 
+
+        -> NOTE: So CMDB answers the question 
+        "what do we have, where is it, and how does everything connect?"
