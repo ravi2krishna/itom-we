@@ -360,6 +360,231 @@ Class - 2
 
 
 
+Class - 3
+==========
+
+    -> Discovery 
+
+        -> MID Server 
+
+        -> Credentials 
+
+        -> Probes 
+
+        -> Sensors 
+
+        -> Patterns 
+
+
+    -> Credentials 
+
+        -> Once the MID Server Reaches Your Devices, it needs to Login into 
+        Devices to interrogate devices, that's where Credentials are required. 
+
+        -> Credentials are Authentication Secrets stored Securely in Service Now, 
+        from here MID Server Uses Credentials To Access Devices. 
+
+        -> Credentials are never stored in plain text, they are "Encrypted"
+
+        -> MID Server Receives Encrypted Credentials and Decrypts it at the time of use
+
+
+        -> We have different types of Credentials based on the Infrastructure needs 
+
+            -> SSH Credentials used in Linux & Unix Environments 
+            SSH Credentials are made of Username, Public Key & Private Key. 
+
+            -> Windows Credentials Uses, Regular Username & Password. 
+
+            -> JDBC Credentials For Databases 
+
+            -> VM Ware Credentials 
+
+            -> Cloud Infrastructure Like AWS, Azure etc uses API Keys or Tokens 
+
+            -> etc 
+
+        
+
+    -> Probes & Sensors 
+
+        -> Probes & Sensors are two halves of same job.
+
+
+    -> Probes
+
+        -> A Probe Is Question 
+
+            -> It's a Script / Command, that MID Server Executes against 
+            Target Device to collect RAW Data. 
+
+            -> It Runs On MID Server Side, reaches to Target Device and brings 
+            all raw output like Commands, XML, JSON etc 
+
+            -> The Raw Output Will be stored at Service Now inside 
+            ECC (External Communication Channel)
+
+        
+    -> Sensors 
+
+        -> A Sensor Is Answer 
+
+            -> It's a Script that takes raw output from probe and parses it
+            extracting fields like OS, Version, IP Address, Hostname etc 
+            and Maps them to CI Attributes, updating records in CMDB.
+
+
+
+    -> Detective Story 
+
+        -> Detective Assistant / Probe 
+
+            -> Goes to Crime Scene, Takes Photos, Lifts Fingerprints etc 
+            collected all raw evidences. 
+
+            -> ITOM: Probes runs Scripts, Collects Data 
+
+        
+        -> Bag Of Evidence / ECC Queue 
+
+            -> Bag Of Evidence Contains Lot Of Unprocessed Raw Evidences 
+
+            -> ITOM: RAW Data is collected into ECC 
+
+
+        -> Detective / Sensor 
+
+            -> Detective sits at desk, opens the bag of evidences and 
+            examines each item, extracts meaning of those items and
+            writes the final case report.
+
+            -> ITOM: Extracts Data From ECC Queue and gives meaningful fields 
+            like OS, Version, IP Address, Hostname etc 
+
+
+        
+            -> Service Now Says -> "Discover this IP" 
+
+                -> Mid Server Sends Probe -> run scripts on target devices
+
+                    -> Raw Data Drops Into ECC Queue (ecc_queue table)
+
+                        -> Sensor picks up data then reads, parses and extracts 
+
+                            -> CMDB gets updated with new CI record 
+
+    
+    -> Patterns 
+
+        -> Patterns are Service Now's Modern Replacement for Older Probes / Sensors 
+
+        -> Patterns are especially used for Software Services Discovery. 
+
+        -> Probes & Sensors are still heavily used for Infrastructure (Hardware / OS / NW) 
+
+        -> Pattern is a Declarative Definition, Unlike Imperative for Probes & Sensors 
+
+            -> Imperative Definition Means "How To Do"
+
+            -> Declarative Definition Means "What To Do"
+
+        -> Patterns are written in Visual Designer(Pattern Designer), 
+        rather than raw javascript 
+
+
+
+    -> Discovery Schedules 
+
+        -> A Discovery Schedule is Configuration record, that defines a discovery run. 
+
+        -> It Answers:
+
+            -> What should be Scanned 
+
+            -> When To Do Scan 
+
+            -> Which Mid Server To Use For Scanning 
+
+
+        -> Key Fields Of Discovery Schedule 
+
+            -> IP Ranges To Scan / Individual Address 
+
+            -> Schedule: Daily or Weekly (Automated) or On-Demand (Manually)
+
+            -> MID Server (Name/IP)
+
+        
+        -> NOTE: When Schedule Completes, It Creates "Discovery Status" Record 
+
+        -> NOTE: Discovery Logs, within each Status Record is your "Debugging Tool" 
+
+            -> To find root cause issues or why discovery failed 
+
+            -> Shows Which IP was tried, What Probe / Pattern was executed. 
+            Which CI is created / updated etc 
+
+
+    -> CI Classification 
+
+        -> CI Classification is the final step, the "Classifier Engine" 
+        determines what CI class to create or Update Existing One 
+
+        -> When Sensor or Pattern, finishes parsing data from device,
+        it hands over RAW Attributes to "Classifier Engine" 
+
+        -> The "Classifier Engines" Job is to look at the Attributes and answer 
+
+            -> What Type Of CI is this ?
+
+            -> Does this already exists in CMDB ? 
+
+        -> "Classifier Engines" has Identification Rules 
+
+
+        -> Identification & Reconciliation 
+
+            -> Identification Rules For Matching Configuration Items Before Insert / Update 
+
+        
+        -> IRE (Identification & Reconciliation Engine)
+
+            -> IRE Engine is underlying engine that uses Identifier rules 
+
+            -> Each CI Class has defined set of "Identifier Fields"
+            that together makes a CI Unique Using Criterion Attributes. 
+
+            -> Criterion Attributes are Unique Fingerprints Of CI 
+
+            -> For Apache Web Server, its the Combination Of 
+            Class Name + Config File + Version is the Identifier 
+
+            -> For Docker Container, the container_id is the Identifier 
+
+            -> etc 
+
+        
+        -> IRE - Questions it always asks ? 
+
+            -> What are you ? 
+
+                -> Linux Server / Desktop / Apache Web Server / Container ?? 
+
+            -> Have i seen you before ?
+
+                -> Does this CI already exist in CMDB 
+
+                    -> YES - Update Existing CI 
+
+                    -> NO - CReate New CI 
+
+                    
+
+
+
+
+
+        
 
 
 
