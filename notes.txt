@@ -578,7 +578,91 @@ Class - 3
 
                     -> NO - CReate New CI 
 
-                    
+Class - 4
+==========                    
+
+    -> Implement Master Lab 
+
+        -> Infrastructure 
+
+            -> Cloud Infrastructure (AWS / AZURE) 
+
+                -> Using Azure 
+
+                -> Create an Azure Account  
+
+                -> Access To Cloud Infrastructure is must 
+
+            -> For Mid Server, Create an machine and install Mid Server Software 
+
+                -> Minimum Requirements 
+
+                    -> 2 CPU's 
+
+                    -> 8 GB RAM 
+
+                    -> 100 GB Storage 
+
+                
+                -> Software 
+
+                    -> Operating System - Windows 
+
+                    -> Install Java 21 LTS 
+
+                
+                -> Service Now PDI 
+
+                    -> Create Service Account For Mid Server 
+
+                        -> NOTE: Mid Server Needs a dedicated user, don't use admin user 
+
+
+    -> Software Setup 
+
+        -> Install Java 21 LTS 
+
+            -> Open Command Prompt 
+
+                -> java -version 
+
+                    -> 'java' is not recognized as an internal or external command, not installed
+
+                -> Java is from oracle vendor 
+
+                    -> https://www.oracle.com/java/technologies/downloads/#jdk21-windows                    
+
+
+    -> Service Now PDI 
+
+        -> Create Service Account For Mid Server 
+
+            -> NOTE: Mid Server Needs a dedicated user, don't use admin user             
+            
+            -> Assign Service Account User Mid Server Roles i.e Permissions 
+
+                -> By default user has no roles 
+
+                -> Add mid_server role to Service Account User Mid Server
+
+
+    -> Install Mid Server On Infrastructure Server 
+
+        -> Once Mid Server is installed 
+
+        -> Check in Service Now PDI
+
+        -> Once Status is Up 
+
+        -> Validate Mid Server 
+
+        -> NOTE: If Mid Server Shows Status As UP and Validated As Yes,
+        the setup of mid server is Completed successfully. 
+        
+         
+
+
+
 
 
 
