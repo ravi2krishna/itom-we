@@ -660,6 +660,53 @@ Class - 4
         the setup of mid server is Completed successfully. 
         
          
+Class - 5
+==========
+
+    -> NOTE: Before Starting Discovery make sure Mid Server Shows Status As UP and Validated As Yes.
+
+    -> NOTE: By default we don't have Discovery Features in Service Now PDI 
+
+    -> NOTE: Install Discovery Plugin From Service Now PDI (Takes 45 mins +)
+
+
+    -> Credentials 
+
+        -> Once the MID Server reaches your devices on network, it needs to login 
+        to Server to get details, that where Credentials are needed. 
+
+        -> NOTE: When Doing Discovery With Windows On AWS / AZURE Use 
+        Private IP, not public IP.
+
+        -> NOTE: On the live machine (Windows) 
+
+            -> We Saw How probes, ecc & sensors 
+            helped us to get the information about CPU & Memory. 
+
+            -> Service Now Says -> "Go Discover This IP(172.16.0.4)"
+
+                -> Mid Server Sends Probe -> Runs Script on target device (172.16.0.4)
+
+                    -> Raw Data Drops Into ECC QUEUE (ecc_queue.do?sys_id=8d3649f747d2cf58524fd)
+
+                        -> Sensor Picks Up Raw Data -> Reads & Parses then Extracts Attributes 
+
+                            -> CMDB Will Get Updated With This Record as CI 
+
+
+        -> NOTE: What we did now is understood Probe Using CPU & Memory
+
+        -> Discovery Fetches All the probes related to Windows and Updates All Info 
+        in CMDB 
+
+    
+    -> Discovery 
+
+        -> ServiceNow Discovery is an "automated process" that continuously scans 
+        and identifies all the components within IT infrastructure and relationships,
+        there by writing all these into CMDB.
+
+
 
 
 
