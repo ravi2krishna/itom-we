@@ -708,6 +708,17 @@ Class - 5
 
 
 
+Class - 6
+==========
+
+    -> Discovery On Linux Server - LAB 
+
+    -> Discovery On Cluster Of Linux Servers - LAB 
+
+    -> Discovery Completed, Next Service Mapping 
+
+
+
 
 
 
