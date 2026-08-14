@@ -718,13 +718,91 @@ Class - 6
     -> Discovery Completed, Next Service Mapping 
 
 
+Class - 7
+==========
+
+    -> Service Mapping 
+
+        -> Service Mapping Is USed To Discover and Track IT Services in an 
+        organization, outlining how each component connects to Business Service. 
+
+        -> Service Mapping Charts Company's Interconnected Environment
+        Which Allows rge organizations to Build a service aware view of 
+        how underlying IT Infrastructure and Applications connect to Business Services. 
+
+        -> https://media.licdn.com/dms/image/v2/D5612AQFTabVd6lwPNw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1675397958842?e=2147483647&v=beta&t=yN3OPRI6JCxvBOLTsW72W3ZQpjN1uDWIztrEgpI-FrU
+
+        -> NOTE: Service Mapping Is way of clearly understanding "Application Services" 
+
+    
+    -> Application Service 
+
+        -> Financial Reporting
+
+            -> An organization wants to generate a Financial Report,
+            they will employ an application server that includes some 
+            linux server, a web server and some application server acting as middleware 
+            and some networking components 
+
+            -> Traditionally IT Departments have relied on Discover to map IT Infrastructure
+
+            -> Service Mapping Foregoes this outdated approach, relying on top-down mapping 
+            focusing on connections between devices and applications so that any issue or problems can be 
+            immediately identified along with the impact on rest of the business service 
+    
+            -> https://www.servicenow.com/docs/r/zurich/it-operations-management/service-mapping/service-mapping-get-started.html
+
+            -> https://www.servicenow.com/docs/api/khub/maps/guxhDnVk8OUAJKLm7WZsYA/resources/9uEv1ID3zPqCzqimr6wCPw-guxhDnVk8OUAJKLm7WZsYA/content?v=653a9edca34cf51b&Ft-Calling-App=ft/turnkey-portal
+
+        
+        -> NOTE: Discovery Sees "What Exists"
+
+        -> NOTE: Service Mapping Sees "How Things Talk To Each Other"
 
 
+        -> To Use Service Mapping 
+
+            -> Make Sure MID Server is Setup and Running 
+
+            -> Discovery Plugin Installed 
+
+            -> Service Mapping Plugin Installed 
 
 
+    -> Discovery To Service Mapping
+
+        -> 1st Phase - Horizontal Discovery 
+
+            -> Linux Server (Hardware)
+
+        
+        -> 2nd Phase - Vertical Discovery / Top Down Mapping 
+
+            -> On Top Of Above Linux Server 
+
+                -> Will Install Some Web Server 
+
+                    -> On Top Of Web Server, Will Setup Ecommerce Business Service 
+
+                        -> Ecommerce Business Service - CODE 
+
+                            -> Verify if business service is running or not 
 
 
+        -> 3rd Phase - Connect Service (ecommerce.com) 
 
+            -> Business Service (ecommerce.com)
+
+                    |
+
+            -> Apache Web Server 
+
+                    | 
+
+            -> Installed On Linux Server 
+
+        
+        -> Entry Point (domain name i.e ecommerce.com)
 
         
 
