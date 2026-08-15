@@ -805,6 +805,11 @@ Class - 7
         -> Entry Point (domain name i.e ecommerce.com)
 
         
+Class - 8
+==========
+
+    -> Service Mapping Lab Completed
+
 
 
 
